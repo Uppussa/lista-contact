@@ -1,8 +1,8 @@
-const ListItem = ({name, email, phone}) => {
+const ListItem = ({name, email, phone, id}) => {
   return (
-      <li class="contact">
-            <span class="name">{name}</span>
-            <span class="details">{email} - {phone}</span>
+      <li key={id} className="contact">
+            <span className="name">{name}</span>
+            <span className="details">{email} - {phone}</span>
         </li>
   )
 }

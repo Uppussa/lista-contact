@@ -1,12 +1,12 @@
 import Form from "../Form"
 
-const Modal = ({closeModal}) => {
+const Modal = ({closeModal, setData, data}) => {
     return (
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span onClick={closeModal} class="close">&times;</span>
+        <div id="modal" className="modal">
+            <div className="modal-content">
+                <span onClick={closeModal} className="close">&times;</span>
                 <h2>Agregar Contacto</h2>
-                <Form />
+                <Form setData={setData} data={data} closeModal={closeModal}/>
             </div>
         </div>
     )
